@@ -1,5 +1,6 @@
 # Js-Refresher
 some of important concepts of javascript are explained here,
+
 1.objects 
 
 2.Normal function 
