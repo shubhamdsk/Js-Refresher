@@ -1,7 +1,7 @@
 # Js-Refresher
-some of important concepts of javascript are explained here,
+Some of important Concepts of Javascript are explained here,
 
-1.objects 
+1.Objects 
 
 2.Normal function 
 
