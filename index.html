@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+        // object
+        let numbers = {
+            dsk: 17,
+            sd: 15
+        };
+        console.log(numbers);
+        console.log(numbers.dsk);
+        console.log(numbers.sd);
+
+        // Normal function
+        function myfun(number) {
+            console.log("Number : " + number)
+        }
+        myfun(45);
+
+        // Arrow Function
+        let myfun1 = (number) => {
+            console.log("Number is " + number)
+        }
+        myfun1(17);
+
+        // callback function
+        setTimeout(() => {
+            console.log("absolutely right !");
+        }, 2000);
+        console.log("I'm the sub string");
+
+        // Event Handling
+        document.addEventListener("dblclick", function myfun2(number) {
+            alert("Double Clicked action performed");
+        })
+    </script>
+    <center>
+        <h1>Javascript Refresher</h1>
+    </center>
+</body>
+
+</html>
