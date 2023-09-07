@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator </title>
+</head>
+
+<body>
+    <script>
+        function mult(...args) {
+            let result = 1;
+            for (let i in args) {
+                result *= args[i];
+            }
+            document.write(`Multiplication :` + result + "<br>");
+        }
+        mult(10, 20, 30);
+        mult(10, 20, 30, 50);
+        document.write("<br>");
+
+        function sum(...args) {
+            let sum = 0;
+            for (let i in arguments) {
+                sum += args[i];
+            }
+            document.write(`Sum : ` + sum + "<br>");
+        }
+        let arr = [20, 30, 40];
+        // This function call will give you a wrong output for array input
+        sum(arr);
+
+        // for getting right output for array i/p we use Spread operator
+        sum(...arr);
+
+
+        document.write("<br>");
+        let arr1 = [1, 2, 4, 5];
+
+        // making the exact clone of arr1 using below statement
+        // let arr2 = arr1;         // o/p : 1,2,4,5,3
+
+        // below statement not gonna made any affect on the result
+        let arr2 = [...arr1];         // o/p : 1,2,4,5
+        arr1.push(3);
+
+        document.write(arr2);
+        console.log(arr2);
+
+        document.write("<br>");
+
+        // array concatenation
+        let arr3 = [10, 20, 30, 40];
+        let arr4 = arr1.concat(arr3);
+        document.write(arr4);
+        console.log(arr4);
+
+        document.write("<br>");
+        document.write("<br>");
+
+        // using spread operator
+        document.writeln("Use of Spread Operator: ");
+        let arr5 = [...arr1, ...arr3];
+
+        document.write(arr4);
+        console.log(arr5);
+        // console.log("");
+
+    </script>
+</body>
+
+</html>
