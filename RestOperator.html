@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Operator</title>
+</head>
+
+<body>
+    <script>
+
+        function div(num1, num2) {
+            let result = num1 / num2;
+            document.write("Division : "+result+"<br>");
+        }
+
+        div(10, 20);
+        // Below two function calls not gone made any affect on the div function with two parameters
+        div(10, 20,30);
+        div(10, 20,30,40);
+        document.write("<br>");
+        
+        function sum() {
+            console.log(arguments);
+            let sum = 0;
+            for (let i in arguments) {
+                sum += arguments[i]
+                
+            }
+            document.write(`Sum : ` + sum + "<br>");
+        }
+        sum(20, 30, 40);
+        sum(20, 30);
+        // This function call made wrong effect on the result
+        sum("shubham",20, 30);
+        document.write("<br>");
+        
+        //For performing any operation with n number of parameters we use rest parameter
+
+        function mult(name, course, ...args) {
+            let result = 1;
+            for (let i in args) {
+                result *= args[i];
+            }
+            document.write(`Multiplication : ${name} ${course} :  ` + result + "<br>");
+        }
+
+        mult("Abc", "Bca", 10, 20, 30);
+        mult("Xyz", "Bcs", 10, 20, 30, 50);
+        mult("Lmn", "Bba", 10, 20, 30, 50, 60);
+
+    </script>
+</body>
+
+</html>
