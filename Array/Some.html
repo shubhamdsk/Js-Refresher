@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Methods - Some</title>
+  </head>
+  <body>
+    <script>
+      // Some Method
+      const items = [
+        { name: "Bike", price: 100 },
+        { name: "TV", price: 200 },
+        { name: "Album", price: 10 },
+        { name: "Book", price: 5 },
+        { name: "Phone", price: 500 },
+        { name: "Computer", price: 1000 },
+        { name: "ComputerKeyword", price: 25 },
+      ];
+
+      const hasExpensiveItems = items.some((item) => {
+        return item.price > 100;
+      });
+
+    //   gives true or false value : if value found : true otherwise false
+      console.log(hasExpensiveItems);
+    </script>
+  </body>
+</html>
